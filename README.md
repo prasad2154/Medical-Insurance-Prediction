@@ -283,6 +283,14 @@ When discussing this project in a **Data Scientist / Machine Learning Engineer**
 >
 > *I serialized the champion pipeline using `joblib` and deployed an interactive Streamlit application with custom CSS, WHO BMI risk analytics, and full Plotly diagnostic dashboards. The application is production-ready and hosted on Streamlit Cloud."*
 
+##Demo Images
+<img width="1841" height="836" alt="image" src="https://github.com/user-attachments/assets/10b4ea58-a6f8-494e-981a-909b6390bc71" />
+<img width="1891" height="851" alt="image" src="https://github.com/user-attachments/assets/be81df0d-16de-43b8-910b-2b512975fb94" />
+<img width="1902" height="857" alt="image" src="https://github.com/user-attachments/assets/95232e67-b7eb-4ac9-8f32-9940300a1b7e" />
+<img width="1862" height="850" alt="image" src="https://github.com/user-attachments/assets/fdb4b048-c816-4359-8c6d-745110346db5" />
+
+
+
 ---
 
 ## 📄 License
