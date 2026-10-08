@@ -1,0 +1,14 @@
+Medical Insurance Cost Predictor - Quickstart Commands
+======================================================
+
+1. Ensure your virtual environment is active:
+   .\venv\Scripts\activate
+
+2. Install all required packages:
+   pip install -r requirements.txt
+
+3. Train & benchmark machine learning models:
+   python src/train_model.py
+
+4. Run the Streamlit web application:
+   streamlit run app.py

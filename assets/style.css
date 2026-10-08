@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Medical Insurance Cost Predictor - Modern Healthcare UI Theme
+   ========================================================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-teal: #0D9488;
+    --primary-cyan: #06B6D4;
+    --primary-dark: #0F172A;
+    --primary-navy: #1E293B;
+    --accent-blue: #3B82F6;
+    --accent-indigo: #6366F1;
+    --accent-emerald: #10B981;
+    --accent-amber: #F59E0B;
+    --accent-rose: #F43F5E;
+    
+    --bg-gradient-start: #F8FAFC;
+    --bg-gradient-end: #F1F5F9;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --card-border: rgba(226, 232, 240, 0.8);
+    --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+}
+
+/* Global Font Application */
+html, body, [class*="css"], [class*="st-"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, .hero-title, .metric-value {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    letter-spacing: -0.02em;
+}
+
+/* Main Container Spacing */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1280px;
+}
+
+/* Header & Hero Styling */
+.hero-header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F766E 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.25);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(13, 148, 136, 0.25);
+    border: 1px solid rgba(45, 212, 191, 0.4);
+    color: #5EEAD4;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    color: #FFFFFF;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #CBD5E1;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 780px;
+    margin-bottom: 0;
+}
+
+/* Metric / KPI Cards */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 1.35rem 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(15, 23, 42, 0.1);
+    border-color: rgba(13, 148, 136, 0.4);
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-teal), var(--primary-cyan));
+    border-radius: 4px 0 0 4px;
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+}
+
+.kpi-value {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-subtext {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+/* Feature & Section Cards */
+.feature-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover {
+    border-color: #CBD5E1;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Prediction Result Showcase */
+.prediction-card {
+    background: linear-gradient(145deg, #042F2E 0%, #0F172A 70%, #134E4A 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    color: #FFFFFF;
+    box-shadow: 0 25px 40px -12px rgba(4, 47, 46, 0.4);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.prediction-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    right: -10%;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.2) 0%, rgba(20, 184, 166, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.prediction-tag {
+    display: inline-block;
+    background: rgba(45, 212, 191, 0.15);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    color: #2DD4BF;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.prediction-amount {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 3.25rem;
+    font-weight: 800;
+    color: #2DD4BF;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(45, 212, 191, 0.2);
+}
+
+.prediction-monthly {
+    font-size: 1.05rem;
+    color: #94A3B8;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.prediction-profile-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.25rem 0;
+}
+
+.profile-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: #E2E8F0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.profile-pill strong {
+    color: #FFFFFF;
+}
+
+/* Professional Disclaimer Alert */
+.disclaimer-box {
+    background: #FFFBEB;
+    border-left: 4px solid var(--accent-amber);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1.15rem;
+    margin-top: 1.5rem;
+    color: #92400E;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.disclaimer-box strong {
+    color: #78350F;
+}
+
+/* Status Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-teal {
+    background: #CCFBF1;
+    color: #0F766E;
+    border: 1px solid #99F6E4;
+}
+
+.badge-rose {
+    background: #FFE4E6;
+    color: #BE123C;
+    border: 1px solid #FECDD3;
+}
+
+.badge-amber {
+    background: #FEF3C7;
+    color: #B45309;
+    border: 1px solid #FDE68A;
+}
+
+.badge-blue {
+    background: #DBEAFE;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+}
+
+/* Streamlit Widget Polish */
+.stButton>button {
+    background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    padding: 0.65rem 1.5rem !important;
+    border-radius: var(--radius-md) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    letter-spacing: 0.01em !important;
+    width: 100%;
+}
+
+.stButton>button:hover {
+    background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%) !important;
+    box-shadow: 0 6px 18px rgba(13, 148, 136, 0.35) !important;
+    transform: translateY(-1px) !important;
+}
+
+.stButton>button:active {
+    transform: translateY(1px) !important;
+}
+
+/* Sidebar Custom Styling */
+[data-testid="stSidebar"] {
+    background-color: #0F172A !important;
+    border-right: 1px solid #1E293B !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: #94A3B8;
+}
+
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+
+/* Sidebar Nav Card */
+.sidebar-brand {
+    padding: 1.25rem 0.5rem 1.5rem 0.5rem;
+    border-bottom: 1px solid #1E293B;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-brand h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF !important;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-brand p {
+    font-size: 0.78rem;
+    color: #64748B !important;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}
+
+/* Model Comparison Table Polish */
+.metric-table-container {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.85rem;
+    }
+    .hero-header {
+        padding: 1.75rem 1.5rem;
+    }
+    .prediction-amount {
+        font-size: 2.5rem;
+    }
+}
