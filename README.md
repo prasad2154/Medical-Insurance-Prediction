@@ -4,7 +4,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B.svg)](https://streamlit.io/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-F7931E.svg)](https://scikit-learn.org/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.18%2B-3F4F75.svg)](https://plotly.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 An enterprise-grade, interactive Machine Learning regression web application designed to forecast annual medical insurance charges using demographic and biometric health attributes. Built with **Scikit-learn Pipelines**, **Streamlit**, and **Plotly**, featuring modern healthcare UI aesthetics, real-time WHO BMI risk tiering, model diagnostics, and explainable feature importances.
 
